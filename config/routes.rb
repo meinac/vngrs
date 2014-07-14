@@ -3,7 +3,8 @@ Vngrs::Application.routes.draw do
   
   root 'home#index'
 
-  resources :contacts do
+  resources :contacts
+  resources :imports, only: :none do
     collection do
       get :import_xml
       post :do_import_xml
