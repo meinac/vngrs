@@ -2,7 +2,13 @@ require 'spec_helper'
 
 describe Contact do
 
+  before(:all) do
+    user = FactoryGirl.create(:user)
+    @contact = FactoryGirl.create(:contact, user: user)
+  end
+
   context 'non-specific tests' do
+    subject { @contact }
     it { should belong_to(:user) }
     it { should validate_presence_of(:user_id) }
     it { should validate_presence_of(:name) }

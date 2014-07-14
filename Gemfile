@@ -9,13 +9,7 @@ gem 'kaminari'
 gem 'devise'
 #gem 'devise-encryptable'
 
-gem 'omniauth-facebook'
-gem 'omniauth-twitter'
-gem 'omniauth-linkedin'
-gem 'omniauth-google-oauth2'
-
-# gem 'ransack'
-# gem 'squeel'
+gem 'ransack'
 
 gem 'sidekiq'
 gem 'console_progress_bar'

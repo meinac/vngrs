@@ -28,10 +28,10 @@ Spork.prefork do
       DatabaseCleaner.strategy = :transaction
       DatabaseCleaner.clean_with(:truncation)
     end
-    config.before(:each) do
+    config.before(:all) do
       DatabaseCleaner.start
     end
-    config.after(:each) do
+    config.after(:all) do
       DatabaseCleaner.clean
     end
     config.before(:all) do
