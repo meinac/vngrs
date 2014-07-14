@@ -1,5 +1,3 @@
-require 'nokogiri'
-
 class ContactsController < ApplicationController
   before_filter :authenticate_user!
   before_filter :find_contact, only: [:edit, :destroy, :update]

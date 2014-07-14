@@ -8,8 +8,8 @@ class Contact < ActiveRecord::Base
 
   validates_numericality_of :user_id, if: Proc.new{|c| c.user_id.present?}
 
-  validates_length_of :name, minimum: 4, maximum: 100, if: Proc.new{|c| c.name.present?}
-  validates_length_of :last_name, minimum: 4, maximum: 100, if: Proc.new{|c| c.last_name.present?}
+  validates_length_of :name, minimum: 3, maximum: 100, if: Proc.new{|c| c.name.present?}
+  validates_length_of :last_name, minimum: 3, maximum: 100, if: Proc.new{|c| c.last_name.present?}
   validates_length_of :email, minimum: 4, maximum: 100, if: Proc.new{|c| c.email.present?}
   validates_length_of :phone, minimum: 7, maximum: 20, if: Proc.new{|c| c.phone.present?}
 
