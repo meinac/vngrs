@@ -3,7 +3,8 @@ class ContactsController < ApplicationController
   before_filter :find_contact, only: [:edit, :destroy, :update]
 
   def index
-    @contacts = current_user.contacts.page(params[:page]).per(30)
+    @search = Contact.search(params[:q])
+    @contacts = @search.result.page(params[:page]).per(20)
   end
 
   def new
@@ -36,7 +37,7 @@ class ContactsController < ApplicationController
     else
       flash[:success] = "Contact could not be removed"
     end
-    redirect_to contacts_path(page: params[:page])
+    redirect_to contacts_path(page: params[:page], q: params[:q])
   end
 
   private

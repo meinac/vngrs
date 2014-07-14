@@ -7,16 +7,16 @@
 %table.contact-table
   %thead
     %tr
-      %th Name
-      %th Last Name
+      %th=sort_link @search, :name, "Name"
+      %th=sort_link @search, :last_name, "Last Name"
       %th Phone
-      %th Email
-      %th Last Update
+      %th=sort_link @search, :email, "Email"
+      %th=sort_link @search, :updated_at, "Last Update"
       %th Operation
   %tbody
     -@contacts.each do |contact|
       %tr{class: cycle("odd", "even")}
-        %td
+        %td{width: "200px"}
           =contact.name
         %td
           =contact.last_name
@@ -29,6 +29,6 @@
         %td.center{width: "100px"}
           =link_to "Edit", edit_contact_path(contact.id)
           |
-          =link_to "Delete", contact_path(contact.id, page: params[:page]), method: :delete, data: { confirm: "Are you sure you want to do that?" }
+          =link_to "Delete", contact_path(contact.id, page: params[:page], q: params[:q]), method: :delete, data: { confirm: "Are you sure you want to do that?" }
 
 =paginate(@contacts)
