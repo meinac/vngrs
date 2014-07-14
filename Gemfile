@@ -29,17 +29,14 @@ gem 'jquery-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-group :development do
+group :development, :test do
+  gem 'rspec-rails'
   gem 'guard'
   gem 'guard-rspec'
   gem 'guard-spork'
-end
-
-group :test do
-  gem 'rspec-rails'
+  gem 'spork'
   gem 'factory_girl_rails'
   gem 'database_cleaner'
-  gem 'webrat', '0.7.1'
   gem 'shoulda'
 end
 
