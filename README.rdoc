@@ -1,27 +1,18 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version 2.0.0-p195
 
-Things you may want to cover:
+* Rails version 4.0.5
 
-* Ruby version
+* Uygulama 32 bit ubuntu sanal makina üzerinde geliştirilmiştir. Nasıl kurulacağı hakkında bilgiyi https://docs.vagrantup.com/v2/getting-started/ adresinden edinebilirsiniz.
 
-* System dependencies
+* Testleri çalıştırmak için "bundle exec guard -p" komunutunu kullanın. Tüm testleri çalıştırmak için enter tuşuna basın, ilgili testi çalıştırmak için test dosyası içinde iken cmd+s ile update edin.
 
-* Configuration
+* xml import işlemi için sidekiq kullanılmaktadır. Bu nedenle redis-server açılmalı ve "bundle exec sidekiq" komutu ile job çalıştırılmalıdır.
 
-* Database creation
+* redis server kurmanıza gerek yoktur, puppet ile vagrant up ederken kurulmaktadır, isterseniz versiyonu değiştirip vagrant provision ile değişiklikleri uygulayabilirsiniz.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* XML validasyonu yapılmamıştır, gerekli olan dtd veya schema tanımı bulunmamaktadır.
 
 
 Please feel free to use a different markup language if you do not plan to run
