@@ -4,7 +4,7 @@ class XmlWorker
 
   def perform(hash_data, user_id)
     user = User.find(user_id)
-    create_contacts(hash_data, user)
+    create_contacts(hash_data, user) if hash_data.present?
   end
 
   def create_contacts(hash, user)
