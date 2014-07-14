@@ -1,3 +1,12 @@
+%h2
+  Import XML
 %p
   Here you can import your contacts with a xml file.
 
+=messages_for
+
+=form_tag({action: :do_import_xml}, multipart: true) do
+  .input
+    =file_field_tag "xml_file"
+  .input
+    =submit_tag "Submit"

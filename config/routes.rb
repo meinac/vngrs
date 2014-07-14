@@ -6,6 +6,8 @@ Vngrs::Application.routes.draw do
   resources :contacts do
     collection do
       get :import_xml
+      post :do_import_xml
+      get :xml_import_errors
     end
   end
 

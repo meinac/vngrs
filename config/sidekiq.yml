@@ -1,0 +1,6 @@
+:verbose: false
+:pidfile: ./tmp/pids/sidekiq.pid
+:timeout: 50
+:queues:
+  - [default, 2]
+  - [xml_import, 1]

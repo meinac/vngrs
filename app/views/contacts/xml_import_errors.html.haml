@@ -1,0 +1,12 @@
+%h2
+  XML Import Errors
+-if @errors
+  %p
+    Sorry about this. You can checkout the errors below.
+
+  -@errors.each do |error|
+    %p
+      =error
+-else
+  %p
+    No errors found!

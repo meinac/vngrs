@@ -1,3 +1,6 @@
+%h2
+  Contact List
+
 =messages_for
 %p
   ="Hi #{current_user.user_name}, here is the your contact list"
@@ -8,6 +11,7 @@
       %th Last Name
       %th Phone
       %th Email
+      %th Last Update
       %th Operation
   %tbody
     -@contacts.each do |contact|
@@ -16,10 +20,15 @@
           =contact.name
         %td
           =contact.last_name
-        %td
+        %td{width: "160px"}
           =contact.phone
-        %td
+        %td{width: "160px"}
           =contact.email
-        %td
+        %td.center{width: "160px"}
+          =l(contact.updated_at, format: :long)
+        %td.center{width: "100px"}
+          =link_to "Edit", edit_contact_path(contact.id)
+          |
+          =link_to "Delete", contact_path(contact.id, page: params[:page]), method: :delete, data: { confirm: "Are you sure you want to do that?" }
 
 =paginate(@contacts)

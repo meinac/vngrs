@@ -17,6 +17,7 @@ gem 'omniauth-google-oauth2'
 # gem 'ransack'
 # gem 'squeel'
 
+gem 'sidekiq'
 gem 'console_progress_bar'
 gem 'easy_redis'
 
