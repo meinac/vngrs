@@ -7,6 +7,7 @@ class ImportsController < ApplicationController
 
   def do_import_xml
     uploaded = params[:xml_file]
+    return redirect_to action: :import_xml if !params[:xml_file]
     XmlWorker.perform_async(Hash.from_xml(uploaded.tempfile)["contacts"]["contact"], current_user.id)
     flash[:notice] = "File uploaded successfully. Data is parsing now..."
     redirect_to action: :import_xml
