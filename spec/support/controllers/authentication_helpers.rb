@@ -6,8 +6,8 @@ module ControllerHelpers
         get action, url_params
       elsif method == :post
         post action, url_params
-      elsif method == :put
-        put action, url_params
+      elsif method == :patch
+        patch action, url_params
       elsif method == :delete
         delete action, url_params
       end
@@ -19,8 +19,8 @@ module ControllerHelpers
         get action, url_params
       elsif method == :post
         post action, url_params
-      elsif method == :put
-        put action, url_params
+      elsif method == :patch
+        patch action, url_params
       elsif method == :delete
         delete action, url_params
       end

@@ -13,7 +13,3 @@
 * redis server kurmanıza gerek yoktur, puppet ile vagrant up ederken kurulmaktadır, isterseniz versiyonu değiştirip vagrant provision ile değişiklikleri uygulayabilirsiniz.
 
 * XML validasyonu yapılmamıştır, gerekli olan dtd veya schema tanımı bulunmamaktadır.
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.

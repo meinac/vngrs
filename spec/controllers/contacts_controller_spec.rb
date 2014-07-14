@@ -27,7 +27,7 @@ describe ContactsController do
     end
     it_behaves_like 'authenticate user', :patch, :update do 
       let(:user) { @user }
-      let(:url_params) { { contact: { id: @contact.id, name: "Mehmet Emin" } } } 
+      let(:url_params) { { id: @contact.id, contact: { name: "Mehmet Emin" } } } 
     end
   end
 
