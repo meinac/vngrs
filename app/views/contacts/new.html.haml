@@ -1,0 +1,29 @@
+%h2
+  New Contact Form
+
+=messages_for @contact
+
+=form_for(@contact) do |f|
+  .input
+    .label
+      =f.label :name
+    =f.text_field :name
+
+  .input
+    .label
+      =f.label :last_name
+    =f.text_field :last_name
+
+  .input
+    .label
+      =f.label :phone
+    =f.text_field :phone
+
+  .input
+    .label
+      =f.label :email
+    =f.email_field :email
+
+  .input
+    =f.submit "Create"
+

@@ -1,0 +1,25 @@
+=messages_for
+%p
+  ="Hi #{current_user.user_name}, here is the your contact list"
+%table.contact-table
+  %thead
+    %tr
+      %th Name
+      %th Last Name
+      %th Phone
+      %th Email
+      %th Operation
+  %tbody
+    -@contacts.each do |contact|
+      %tr{class: cycle("odd", "even")}
+        %td
+          =contact.name
+        %td
+          =contact.last_name
+        %td
+          =contact.phone
+        %td
+          =contact.email
+        %td
+
+=paginate(@contacts)

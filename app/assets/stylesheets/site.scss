@@ -113,10 +113,10 @@ header{
       margin-bottom:20px;
     }
   }
-  .form{
+  form{
     .input{
       margin-bottom: 12px;
-      input[type=text], input[type=password] {
+      input[type=text], input[type=password], input[type=email] {
         width: 275px;
         padding: 6px;
         font-size: 13px;
@@ -163,41 +163,20 @@ header{
         background:#f7f7f7;
       }
       label{
-        display:block;
         font-weight:bold;
         &.radio{
           display:inline-block;
           font-weight:normal;
         }
       }
-    }
-  }
-  ul.sub_menu{
-    padding: 0px 0px 25px 0px;
-    border-bottom: 1px solid;
-    li{
-      list-style: none;
-      float: left;
-      margin-right: 10px;
       a{
-        text-decoration: none;
-        color:#6a6a6a;
-        font-size:1em;
-        font-weight:900;
-        padding:18px 5px 11px 7px;
-        &:visited{
-          color:#6a6a6a;
-        }
-        &:hover{
-          color:$link_colour;
-          text-decoration:none;
-          border-bottom:none;
-        }
+        font-weight: normal;
       }
     }
   }
-  .table_content{
-    table{
+  .contact-table{
+    width: 100%;
+    tbody{
       tr.odd{
         background-color: #fef4e8;
       }
@@ -216,9 +195,9 @@ header{
         }
       }
     }
-    .pagination{
-      margin-top:10px;
-    }
+  }
+  .pagination{
+    margin-top:10px;
   }
 }
 form#new_user{

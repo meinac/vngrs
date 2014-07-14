@@ -3,4 +3,10 @@ Vngrs::Application.routes.draw do
   
   root 'home#index'
 
+  resources :contacts do
+    collection do
+      get :import_xml
+    end
+  end
+
 end
