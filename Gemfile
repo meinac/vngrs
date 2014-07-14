@@ -30,24 +30,14 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
 
 group :development, :test do
-  gem 'rspec-rails'
+  gem 'debugger'
+  #there are a bug with render_views on rspec version 3.x
+  gem 'rspec-rails', '~> 2.99.0'
   gem 'guard'
-  gem 'guard-rspec'
+  gem 'guard-rspec', '~> 3.0.2'
   gem 'guard-spork'
   gem 'spork'
   gem 'factory_girl_rails'
   gem 'database_cleaner'
   gem 'shoulda'
 end
-
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]

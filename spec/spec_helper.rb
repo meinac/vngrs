@@ -19,7 +19,8 @@ Spork.prefork do
     config.infer_base_class_for_anonymous_controllers = false
     config.order = "random"
 
-    config.treat_symbols_as_metadata_keys_with_true_values = true
+    config.infer_spec_type_from_file_location!
+
     config.filter_run :focus => true
     config.run_all_when_everything_filtered = true
 
@@ -39,7 +40,6 @@ Spork.prefork do
 
     include Warden::Test::Helpers
     config.after(:each) { Warden.test_reset! }
-
     config.include Devise::TestHelpers, :type => :controller
   end
 end
@@ -47,5 +47,4 @@ end
 Spork.each_run do
   Vngrs::Application.reload_routes!
   FactoryGirl.definition_file_paths = [File.join(Rails.root, 'spec', 'factories')]
-  # FactoryGirl.find_definitions
 end
