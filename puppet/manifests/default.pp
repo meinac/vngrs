@@ -32,7 +32,6 @@ class install_postgres {
   pg_user { 'vngrs':
     superuser => true,
     ensure  => present,
-    password   => '123',
     createdb   => true,
     require => Class['postgresql::server']
   }
